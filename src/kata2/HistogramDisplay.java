@@ -12,7 +12,13 @@ package kata2;
 public class HistogramDisplay {
     private final Histogram hist;
     
-    public HistogramDisplay(){
-        
+    public HistogramDisplay(Histogram hist){
+        this.hist = hist;
+    }
+    
+    void execute(){
+        for (int value : hist.getValues()) {
+            System.out.println(value + "==>" + hist.getCount(value));
+        }
     }
 }
