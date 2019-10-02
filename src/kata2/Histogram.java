@@ -5,14 +5,21 @@
  */
 package kata2;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  *
  * @author Alber
  */
-class Histogram {
+public class Histogram {
+    private final Map<Integer,Integer> counts = new HashMap<>();
     
-    public Histogram(){
-       
+    public Histogram(int...values){
+        for (int value : values){
+            counts.put(value,counts.getOrDefault(value,0)+1);
+        } 
+            
     }
     
 }
